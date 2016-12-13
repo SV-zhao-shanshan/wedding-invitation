@@ -1,48 +1,50 @@
-* {
-	/*box-sizing: border-box;
-	-webkit-box-sizing: border-box;*/
+body, button, input, select, textarea, h1, h2, h3, h4, h5, h6 {
+	font-family:'Microsoft Yahei', arial,'Hiragino Sans GB',宋体,sans-serif;
+	font-weight: 100;
+	font-size: 24px;
 }
-html, body {
-	/*margin: 0;
-	color: #fff;
-	background-color: #fff;
-	font: normal 12px/1.5 "Helvetica Neue", Helvetica, Arial, STHeiTi, "Microsoft Yahei", sans-serif;
-	-webkit-tap-highlight-color: transparent;
-	-webkit-user-select: none;
-	user-select: none;*/
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body, figure, p{
 	margin: 0;
+}
+html, body, article, section, figure, figure>.img{
+	height: 100%;
+}
+a {
+	text-decoration: none;
+}
+button,a {
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+ul {
 	padding: 0;
-	background-color: #333;
+}
+li {
+	list-style: none;
+}
+body {
+	background: #f7f7f7;
+}
+article {
+	position: relative;
+	margin: auto;
+	width: 640px;
+}
+.hidden {
 	overflow: hidden;
-	height: 100%;
 }
-#img-kiss {
-	height: 100%;
-	/*overflow: hidden;*/
-	background: url(images/img-sitting.jpg) no-repeat center center;
+#music-btn {
+	position: absolute;
+	top: 50px;
+	right: 50px;
+	opacity: .8;
+	z-index: 111;
 }
-.pages .page figure {
-	height: 100%;
-	width: 100%;
-}
-.pages .page figure .img-sitting {
-	height: 100%;
-	width: 100%;
-	background-image: url(images/img-sitting.jpg);
-}
-.swiper-slide {
-	/*float: left;
-	width: 100%;
-	height: 100%;*/
-}
-.page-home .brush-bg {
-	/*width: 100%;
-	height: 100%;
-	background: url('images/brushes_wallpaper.jpg') no-repeat center center;
-	-webkit-background-size: cover;
-	background-size: cover;
-	-webkit-transform: scale(1) rotate(0deg);
-	transform: scale(1) rotate(0deg);
-	animation: brush-bg 8s cubic-bezier(0.43, 0.43, 0.58, 0.57) 0s 1 alternate forwards;
-	-webkit-animation: brush-bg 8s cubic-bezier(0.43, 0.43, 0.58, 0.57) 0s 1 alternate forwards;*/
-}
+
