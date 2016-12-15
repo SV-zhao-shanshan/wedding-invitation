@@ -52,6 +52,7 @@ let slider = function (domNode) {
     }
 
     let events = {
+        index: 0,     //显示元素的索引
     	slider: domNode,     //this为slider对象
     	handleEvent: function(event) {
             var self = this;     //this指events对象
@@ -81,8 +82,8 @@ let slider = function (domNode) {
             if(isScrolling === 1){
                 event.preventDefault();      //阻止触摸事件的默认行为，即阻止滚屏
                 // alert('up!');
-                // this.slider.className = 'cnt';
-                // this.slider.style.left = -this.index*600 + endPos.x + 'px';
+                this.slider.className = 'page';
+                // this.slider.style.top = '-' + 100*this.index +'%';
             }
         },
         //滑动释放
@@ -93,15 +94,17 @@ let slider = function (domNode) {
                 if(Number(duration) > 10){     
                     //判断是上移还是下移，当偏移量大于10时执行
                     if(endPos.y > 10){
-                    	alert('上移');
-                        // if(this.index !== 0) this.index -= 1;
+                    	// alert('上移');
+                        // this.slider.
+                        if(this.index !== 0) this.index -= 1;
                     }else if(endPos.y < -10){
-                    	alert('下移');
-                        // if(this.index !== this.icon.length-1) this.index += 1;
+                    	// alert('下移');
+                        if(this.index !== 3) this.index += 1;
                     }
                 }
                 // this.icon[this.index].className = 'curr';
-                // this.slider.className = 'cnt f-anim';
+                this.slider.className = 'page slide';
+                this.slider.style.top = '-' + 100*this.index +'%';
                 // this.slider.style.left = -this.index*600 + 'px';
             }
             //解绑事件
